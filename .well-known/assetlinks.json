@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.gboutin.reco",
+    "sha256_cert_fingerprints":
+    ["f4:03:30:af:8a:eb:bf:30:c6:59:1a:54:c3:a8:e1:29:fa:48:72:2f:0a:c8:2e:01:af:30:63:0d:3a:33:8a:19","d9:35:16:d0:8a:c9:a6:3f:6b:ab:e0:06:a5:f3:55:70:55:b5:d6:29:01:ee:32:77:e6:ba:b0:3f:d6:42:31:4e"]
+  }
+}]
