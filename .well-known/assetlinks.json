@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.gboutin.reco.broken",
+    "package_name": "com.gboutin.reco",
     "sha256_cert_fingerprints": ["D9:35:16:D0:8A:C9:A6:3F:6B:AB:E0:06:A5:F3:55:70:55:B5:D6:29:01:EE:32:77:E6:BA:B0:3F:D6:42:31:4E"]
   }
 }]
