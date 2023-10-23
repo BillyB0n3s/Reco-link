@@ -12,7 +12,18 @@ function getOS()
   return null;
 }
 
-alert(getOS());
+//alert(getOS());
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text)
+.then(() => {
+  console.log(`Copied text to clipboard: ${text}`);
+  alert(`Copied text to clipboard: ${text}`);
+})
+.catch((error) => {
+  console.error(`Could not copy text: ${error}`);
+});
+}
 
 function redirect()
 {
@@ -23,10 +34,10 @@ function redirect()
   const param1 = urlParams.get("param1");
   const param2 = urlParams.get("param2");
 
-  alert("nbParams: " + nbParams +  ", param1: " + param1 + ", param2: " + param2);
+  //alert("nbParams: " + nbParams +  ", param1: " + param1 + ", param2: " + param2);
 
-  if(param1 != null){ alert(param1) };
-  if(param2 != null){ alert(param2) };
+//  if(param1 != null){ alert(param1) };
+//  if(param2 != null){ alert(param2) };
 
   const apps = {
     Android: 'https://play.google.com',
@@ -36,7 +47,8 @@ function redirect()
 
   const os = getOS();
   if (os in apps) {
-      location.replace(apps[os] + "?param=" + param1);
+	  copyToClipboard(param1);
+      //location.replace(apps[os] + "?param=" + param1);
   }
   /*else {
     const message = document.querySelector('.message');
@@ -45,3 +57,5 @@ function redirect()
 }
 
 redirect();
+
+
