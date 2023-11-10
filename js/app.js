@@ -46,7 +46,7 @@ function redirect()
   };
 
   const os = getOS();
-  if (os === 'Android'){ 
+  if (os == "Android"){ 
    copyToClipboard(param1);
    location.replace('https://play.google.com/store/apps/details?id=com.gboutin.reco&referrer=' + param1);
   }else if (os in apps) {
