@@ -40,13 +40,16 @@ function redirect()
 //  if(param2 != null){ alert(param2) };
 
   const apps = {
-    Android: 'https://play.google.com/store/apps/details?id=com.gboutin.reco&referrer=${param1}',
+    //Android: 'https://play.google.com/store/apps/details?id=com.gboutin.reco&referrer=',
     Windows: 'https://www.bbc.com/news',
     iOS: 'https://www.apple.com/store',
   };
 
   const os = getOS();
-  if (os in apps) {
+  if (os === 'Android'){ 
+   copyToClipboard(param1);
+   location.replace('https://play.google.com/store/apps/details?id=com.gboutin.reco&referrer=' + param1);
+  }else if (os in apps) {
 	  copyToClipboard(param1);
       //location.replace(apps[os] + "?param=" + param1);
   }
