@@ -31,27 +31,20 @@ function redirect()
   const urlParams = new URLSearchParams(queryString);
 
   const nbParams = urlParams.size;
-  const param1 = urlParams.get("param1");
-  const param2 = urlParams.get("param2");
+  const referrer = urlParams.get("referrer");
+  //const param2 = urlParams.get("param2");
 
   //alert("nbParams: " + nbParams +  ", param1: " + param1 + ", param2: " + param2);
 
 //  if(param1 != null){ alert(param1) };
 //  if(param2 != null){ alert(param2) };
 
-  const apps = {
-    //Android: 'https://play.google.com/store/apps/details?id=com.gboutin.reco&referrer=',
-    Windows: 'https://www.bbc.com/news',
-    iOS: 'https://www.apple.com/store',
-  };
-
   const os = getOS();
   if (os == "Android"){ 
-   copyToClipboard(param1);
-   location.replace('https://play.google.com/store/apps/details?id=com.gboutin.reco&referrer=' + param1);
-  }else if (os in apps) {
-	  copyToClipboard(param1);
-      //location.replace(apps[os] + "?param=" + param1);
+   location.replace('https://play.google.com/store/apps/details?id=com.gboutin.reco&referrer=' + referrer);
+  }else if (os == "iOS") {
+   copyToClipboard(referrer);
+   //location.replace('https://www.apple.com/store');  // https://apps.apple.com/us/app/app_name/app_id ???
   }
   /*else {
     const message = document.querySelector('.message');
